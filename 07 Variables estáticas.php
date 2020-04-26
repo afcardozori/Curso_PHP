@@ -15,6 +15,11 @@
 	incrementaVariable();
 	incrementaVariable();
 	incrementaVariable();
+
+	asdf
+	asdf
+
+	sdf
 	incrementaVariable();
 	incrementaVariable();
 	incrementaVariable();
