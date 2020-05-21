@@ -1,7 +1,7 @@
 <?php 
         
-    class Coche{
-        var $ruedas;
+    class Coche{ 
+        private $ruedas;
         var $color;
         var $motor;
 

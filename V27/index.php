@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,19 +9,14 @@
     <?php  
     include ("vehiculos.php");
     $mazda= new Coche();
-
     $pegaso=  new Camion();
-
-    echo "Mazda tiene " . $mazda->ruedas . " Ruedas<br>";
-    echo "Pegaso tiene " . $pegaso->ruedas . " Ruedas<br>";
-
-    $pegaso->Frenar();
+    //$mazda->ruedas=7;
     
-
-    $pegaso->arrancar();
-
-
-
+    echo "Mazda tiene " . $mazda->get_ruedas() . " Ruedas<br>";
+    echo "Pegaso tiene " . $pegaso->get_ruedas() . " Ruedas<br>";
+    echo "Mazda tiene " . $mazda->get_motor() . "<br>";
+    echo "Pegaso tiene " . $pegaso->get_motor() . "<br>";
+    
     ?>
 </body>
 </html>

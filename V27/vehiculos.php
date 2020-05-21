@@ -1,16 +1,21 @@
 <?php 
         
-    class Coche{
-        var $ruedas;
+    class Coche{ 
+        protected $ruedas;
         var $color;
-        var $motor;
+        protected $motor;
 
         function __construct (){
             $this->ruedas=4;
             $this->color="";
             $this->motor=1600;
         }
-
+        function get_motor(){
+            return $this->motor;
+        }
+        function get_ruedas(){
+            return $this->ruedas;
+        }
         function arrancar(){
             echo "Estoy arrancando rrun rrun <br>";         
         }
