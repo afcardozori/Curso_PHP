@@ -1,0 +1,43 @@
+<?php 
+        
+    class Coche{
+        var $ruedas;
+        var $color;
+        var $motor;
+
+        function __construct (){
+            $this->ruedas=4;
+            $this->color="";
+            $this->motor=1600;
+        }
+
+        function arrancar(){
+            echo "Estoy arrancando rrun rrun <br>";         
+        }
+        function girar(){
+            echo "Estoy girando wiii <br>";
+        }
+        function Frenar(){
+            echo "Estoy frenando rran rran <br>";
+        }
+        function establece_color($color_coche,$nombre_coche){
+            $this->color=$color_coche;
+            echo "El color de " . $nombre_coche . " es: ".$this->color;
+        }
+    }
+    
+   
+    class Camion extends Coche{
+
+
+            function __construct (){
+                $this->ruedas=8;
+                $this->color="";
+                $this->motor=2600;
+        }
+
+        
+    }
+   
+
+    ?>
