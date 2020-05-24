@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Document</title>
+    <title>Document1212</title>
 
 
     
@@ -30,7 +30,7 @@
         while($fila=mysqli_fetch_array($resultados, MYSQLI_ASSOC)){
                         
             echo "<table widht='50%' alingn='center'><tr><td>";
-            echo $fila['A'] . "</td><td>" . " ";
+            echo $fila['A'] . "</td><td>" . "    ";
             echo $fila['B'] . "</td><td>" . " ";
             echo $fila['C'] . "</td><td>" . " ";
             echo $fila['E'] . "</td><td>" . " ";
