@@ -27,21 +27,21 @@
 <?php
 
 	if (isset($_POST["enviando"])){
-		$edad=$_POST["edad_usuario"];
 		$nombre=$_POST["nombre_usuario"];
-		switch ($nombre){
-			case "Cardozo":
+		$password=$_POST["password"];
+		switch (true){
+			case $nombre=="Cardozo" && $password==1234:
 				echo "Usuario autorizado. Bueno casi";
 				break;
-			case "Monsalve":
+			case $nombre=="Velez" && $password==1234:
 					echo "Usuario autorizado. Bueno casi";
 				break;
-			case "Velez":
+			case $nombre=="Monsalve" && $password==1234:
 				echo "Usuario autorizado. Obvio si";
 				break;
 			default:
 				echo "Usuario no autorizado";
-			endswitch;
+			endswitch();
 			
 			}
 		/*if ($edad<=18){
