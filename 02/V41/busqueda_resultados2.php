@@ -41,17 +41,21 @@
 </head>
 
 <body>
-    <?php  
-    $mibusqueda=$_GET["buscar"];
-    $mipag=$_SERVER["$PHP_SELF"];
-    if ($mibusqueda!=NULL){
-        ejecuta_consulta($mibusqueda);
-    }else{
-        echo ("<form action='" . $mipag . "'method='get''>
-        <label>Buscar:<input type='text' name='buscar'></label>
-        <input type='submit' name='enviando' value='Dale!'>
-        </form>");
-    }
-    ?>
+<?php
+if(isset($_POST["buscar"])==false)  /*Recordar que isset determina si una variable está definida y no es NULL. Entonces devolverá false si no está definida (como en este caso). Por lo tanto, si el input buscar no a enviado datos, entonces  muestra el formulario/
+{                                   /* Al dejar action="", le indica al submit que lo envíe a la misma página*/
+ echo " <fieldset>
+                <legend><h3>Formulario para buscar en una base de datos</h3></legend>    
+                      <form action='' method='post'/> 
+                             <label> BUSCAR: <input type='text' name = 'buscar'> </label>
+                                             <input type='submit' name='enviando' value='Enviar'>
+                      </form>
+      </fieldset>";
+}
+else                   /* Si el input buscar está definido (si envió datos) ejecuta la consulta*/
+{  
+   ejecuta_consulta($_POST["buscar"]);
+} 
+?>
 </body>
 </html>
